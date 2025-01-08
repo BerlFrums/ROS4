@@ -1,6 +1,22 @@
 from lokace import Lokace
 from predmet import Predmet
 from osoba import Osoba
+print()
+input("Pro spuštění tutorialu stiskni ENTER")
+print()
+print("Lokace vybíráš pomocí čísel 1 až 4.")
+print()
+print("Pokud budeš chtít zakoupit předmět, tak zadej písmeno: K")
+print("Pokud budeš chtít prodat předmět, tak zadej písmeno: P")
+print("Pokud chceš jít dál, tak zadej písmeno: J")
+print()
+print("V inventáři máš místo pouze pro 2 předměty.")
+print("Jméno předmětu, který chceš zakoupit nebo prodat musíš napsat přesně tak, jak je uvedeno na skladě.")
+print("Stejně tak můžeš nakupovat ve večerce vylepšení, jako je kabát a batoh.")
+print("Kabát ti rozšíří inventář o 2 předměty a batoh o 3.")
+print("Cena kabátu je 150 Kč a batohu 400 Kč.")
+print()
+input("Pro spuštění hry stiskni ENTER")
 
 # Inicializace lokací a předmětů
 predmety = {
