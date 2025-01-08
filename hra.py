@@ -1,6 +1,3 @@
-from lokace import Lokace
-from predmet import Predmet
-from osoba import Osoba
 print()
 input("Pro spuštění tutorialu stiskni ENTER")
 print()
@@ -17,6 +14,12 @@ print("Kabát ti rozšíří inventář o 2 předměty a batoh o 3.")
 print("Cena kabátu je 150 Kč a batohu 400 Kč.")
 print()
 input("Pro spuštění hry stiskni ENTER")
+
+
+from lokace import Lokace
+from predmet import Predmet
+from osoba import Osoba
+
 
 # Inicializace lokací a předmětů
 predmety = {
