@@ -1,4 +1,3 @@
-
 class Osoba:
     def __init__(self, jmeno):
         self.jmeno = jmeno
@@ -25,15 +24,15 @@ class Osoba:
                 del self.inventar[nazev_predmetu]
             print(f"Prodal jsi {nazev_predmetu} za {predmet.aktualni_cena} Kč.")
         else:
-            print("Nemáš dost peněz na toto vylepšení.")
+            print(f"Nemáš žádný {nazev_predmetu} na prodej.")
 
     def koupit_vylepseni(self, typ_vylepseni, cena):
         if self.penize >= cena:
-            self.penize -= cena:
+            self.penize -= cena
             if typ_vylepseni == "kabát":
                 self.max_velikost_inventare += 2
             elif typ_vylepseni == "batoh":
                 self.max_velikost_inventare += 3
-            print(f"Koupil jsi }{typ_vylepseni}. Kapacita inventáře zvětšena!")
+            print(f"Koupil jsi {typ_vylepseni}. Kapacita inventáře zvětšena!")
         else:
             print("Nemáš dost peněz na toto vylepšení.")
