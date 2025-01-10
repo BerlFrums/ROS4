@@ -1,13 +1,12 @@
-class Lokace:
-    def __init__(self, nazev, predmety):
+import random
+
+class Predmet:
+    def __init__(self, nazev, min_cena, max_cena):
         self.nazev = nazev
-        self.predmety = predmety  # Slovník predmetů {nazev_predmetu: objekt Predmet}
+        self.min_cena = min_cena
+        self.max_cena = max_cena
+        self.aktualni_cena = random.randint(min_cena, max_cena)
 
-    def zobrazit_predmety(self):
-        print(f"Předměty dostupné v lokaci {self.nazev}:")
-        for predmet in self.predmety.values():
-            print(f"{predmet.nazev}: {predmet.aktualni_cena} Kč")
-
-    def aktualizovat_ceny(self):
-        for predmet in self.predmety.values():
-            predmet.aktualizovat_cenu()
+    def aktualizovat_cenu(self):
+        zmena = random.randint(-5, 5)
+        self.aktualni_cena = max(self.min_cena, min(self.max_cena, self.aktualni_cena + zmena))
