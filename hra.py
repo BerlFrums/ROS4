@@ -119,9 +119,8 @@ def main():
 
     vysledky.sort(key=lambda x: x[1], reverse=True)
 
-    for jmeno, penize in vysledky:
-        print(f"{jmeno}: {penize} Kč")
-
+    for index, (jmeno, penize) in enumerate(vysledky, start=1):
+        print(f"{index}. {jmeno}: {penize} Kč")
 
 if __name__ == "__main__":
     main()
