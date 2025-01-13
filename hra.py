@@ -21,7 +21,6 @@ from predmet import Predmet
 from osoba import Osoba
 
 
-# Inicializace lokací a předmětů
 predmety = {
     "Utopenec": Predmet("Utopenec", 50, 100),
     "Med": Predmet("Med", 100, 200),
