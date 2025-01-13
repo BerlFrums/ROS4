@@ -105,12 +105,23 @@ def main():
     hrac.jmeno = jmeno_hrace
     print("Konec hry!")
     print(f"Konečný počet peněz: {hrac.penize} Kč.")
+
     with open("highscores.txt", "a", encoding="utf-8") as soubor:
         soubor.write(f"{hrac.jmeno}: {hrac.penize} Kč\n")
 
     print("Nejlepší výsledky:")
     with open("highscores.txt", "r", encoding="utf-8") as soubor:
-        print(soubor.read())
+        vysledky = []
+        for radek in soubor:
+            jmeno, penize = radek.rsplit(": ", 1)
+            penize = int(penize.replace(" Kč", ""))
+            vysledky.append((jmeno, penize))
+
+    vysledky.sort(key=lambda x: x[1], reverse=True)
+
+    for jmeno, penize in vysledky:
+        print(f"{jmeno}: {penize} Kč")
+
 
 if __name__ == "__main__":
     main()
